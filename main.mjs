@@ -17,7 +17,7 @@ import std_deck  from "./config/decks/standard.json";
 import stdj_deck from "./config/decks/standard_jokers.json";
 
 const config     = { "decks": { "standard": std_deck, "standard_jokers": stdj_deck } },
-    default_opts = { "cards": stdj_deck };
+    default_opts = { "cards": std_deck };
 
 function init(user_opts = {}) {
     let opts  = extend({}, default_opts, user_opts),
