@@ -1,0 +1,7 @@
+{
+    "c": { "name": "club",    "color": "black" },
+    "d": { "name": "diamond", "color": "red"   },
+    "h": { "name": "heart",   "color": "red"   },
+    "j": { "name": "joker",   "color": null    },
+    "s": { "name": "spade",   "color": "black" }
+}
