@@ -4,6 +4,11 @@
   "description": "A utility for simulating a deck of playing cards in Node.js",
   "author": "Adam Lacoste <adam.lacoste@hotmail.com>",
   "license": "ISC",
+  "hopepage": "https://github.com/adamlacoste/card-sharp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamlacoste/card-sharp.git"
+  },
   "main": "./main.mjs",
   "exports": "./main.mjs",
   "type": "module",
