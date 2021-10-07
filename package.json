@@ -1,15 +1,18 @@
 {
-  "name": "cards",
-  "version": "0.0.0",
-  "description": "A configurable deck of playing cards",
-  "main": "index.js",
+  "name": "card-sharp",
+  "version": "0.1.0",
+  "description": "A utility for simulating a deck of playing cards in Node.js",
+  "author": "Adam Lacoste <adam.lacoste@hotmail.com>",
+  "license": "ISC",
+  "main": "./main.mjs",
+  "exports": "./main.mjs",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Adam Lacoste <adam.lacoste@hotmail.com>",
-  "license": "ISC",
   "dependencies": {
     "deep-extend": "^0.6.0",
+    "just-typeof": "^2.0.0",
     "knuth-shuffle": "^1.0.8"
   }
 }
