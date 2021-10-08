@@ -4,20 +4,30 @@
   "description": "A utility for simulating a deck of playing cards in Node.js",
   "author": "Adam Lacoste <adam.lacoste@hotmail.com>",
   "license": "ISC",
-  "hopepage": "https://github.com/adamlacoste/card-sharp",
+  "homepage": "https://github.com/adamlacoste/card-sharp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adamlacoste/card-sharp.git"
+    "url": "git+ssh://git@github.com/adamlacoste/card-sharp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adamlacoste/card-sharp/issues"
   },
   "main": "./main.mjs",
   "exports": "./main.mjs",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/eslint"
   },
   "dependencies": {
     "deep-extend": "^0.6.0",
     "just-typeof": "^2.0.0",
     "knuth-shuffle": "^1.0.8"
+  },
+  "engines": {
+    "node": "^14.18.0",
+    "npm": "^6.14.15"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
   }
 }
