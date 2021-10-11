@@ -23,9 +23,9 @@ This will give you a simulated deck of 52 French-style playing cards, including
 ace through king in four suits: clubs, diamonds, hearts, and spades.  Jokers 
 are not included in the default deck.
 
-From there, you can draw cards from this deck, return them to a discard pile, 
-shuffle the deck (optionally returning the discard pile to the deck), or deal 
-cards to multiple players in turn.
+From there, you can `draw` cards from this deck, return them to a `discard` 
+pile, `shuffle` the deck (optionally returning the discard pile to the deck), 
+or `deal` cards to multiple players in turn.
 
 Note that the deck is not initially shuffled.
 
