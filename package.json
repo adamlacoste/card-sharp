@@ -17,7 +17,7 @@
   "type": "module",
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
-    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config config/jest.json"
   },
   "dependencies": {
     "deep-extend": "^0.6.0",

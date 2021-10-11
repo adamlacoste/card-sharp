@@ -1,0 +1,23 @@
+{
+  "clearMocks": true,
+  "collectCoverage": true,
+  "coverageDirectory": "test/coverage",
+  "coveragePathIgnorePatterns": [
+    "/node_modules/"
+  ],
+  "coverageProvider": "v8",
+  "coverageReporters": [
+    "json"
+  ],
+  "moduleFileExtensions": [
+    "cjs",
+    "js",
+    "json",
+    "mjs"
+  ],
+  "rootDir": "..",
+  "testMatch": [
+    "**/*.test.mjs"
+  ],
+  "transform": {}
+}
