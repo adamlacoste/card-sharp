@@ -1,12 +1,12 @@
 # Card Sharp
 
-Card Sharp is a utility for simulating a deck of playing cards in Node.js.  It 
-is a work in progress and may change significantly before it reaches version 
+**Card Sharp** is a utility for simulating a deck of playing cards in Node.js.  
+It is a work in progress and may change significantly before it reaches version 
 1.0.
 
 ## Quick Start
 
-To get started using Card Sharp quickly, you can use the default ESM export to 
+To get started using **Card Sharp**, you can use the default ESM export to 
 instantiate a new deck.  (Sorry, CommonJS is not supported at this time.  Let 
 me know if that's a feature you want.)
 
@@ -64,10 +64,10 @@ Card Sharp's default export is an `init` function which sets up a default
 52-card deck for you.  Additionally, the package entrypoint has the following 
 named exports:
 
-* Card - the class representing a single playing card
-* Deck - the class representing a deck of playing cards
-* config - a configuration object containing data which can be used to set up a deck
-* init - the initialization function which is also the default export
+* `Card` - the class representing a single playing card
+* `Deck` - the class representing a deck of playing cards
+* `config` - a configuration object containing data which can be used to set up a deck
+* `init` - the initialization function which is also the default export
 
 ## Configuration
 
@@ -93,14 +93,7 @@ const custom_card_set = [ { "rank": "a", "suit": "c" }, { "rank": "2", "suit": "
 let custom_deck = init(custom_card_set);
 ```
 
-## Card API
+## API
 
-To do
-
-## Deck API
-
-To do
-
----
-
-This readme is under construction.
+* [`Card`](https://github.com/adamlacoste/card-sharp/blob/main/doc/lib/card.md)
+* [`Deck`](https://github.com/adamlacoste/card-sharp/blob/main/doc/lib/deck.md)
