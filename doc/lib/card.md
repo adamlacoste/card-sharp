@@ -1,63 +1,70 @@
 
-<br><a name="module_card-sharp/lib/card"></a>
-
 ## card-sharp/lib/card
-> Card module
 
-**Requires**: <code>module:assert</code>, <code>module:deep-extend</code>, <code>module:just-typeof</code>  
+Card module
+
+**Requires**: `module:assert`, `module:deep-extend`, `module:just-typeof`  
 **Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
 
-* [card-sharp/lib/card](#module_card-sharp/lib/card)
-    * [~Card](#module_card-sharp/lib/card..Card)
-        * [new Card(user_opts)](#new_module_card-sharp/lib/card..Card_new)
+* [card-sharp/lib/card]
+    * [~Card]
+        * [new Card(user_opts)]
         * _instance_
-            * [.toString()](#module_card-sharp/lib/card..Card+toString) ⇒ <code>string</code>
+            * [.toString()]
         * _static_
-            * [.fromArray(cards)](#module_card-sharp/lib/card..Card.fromArray) ⇒ <code>array.&lt;Card&gt;</code>
+            * [.fromArray(cards)]
 
-
-<br><a name="module_card-sharp/lib/card..Card"></a>
 
 ### card-sharp/lib/card~Card
-> Card class
-> 
->  A single French-style playing card.
 
+Card class
 
-* [~Card](#module_card-sharp/lib/card..Card)
-    * [new Card(user_opts)](#new_module_card-sharp/lib/card..Card_new)
+ A single French-style playing card.
+
+**Kind**: inner class of [`card-sharp/lib/card`]  
+
+* [~Card]
+    * [new Card(user_opts)]
     * _instance_
-        * [.toString()](#module_card-sharp/lib/card..Card+toString) ⇒ <code>string</code>
+        * [.toString()]
     * _static_
-        * [.fromArray(cards)](#module_card-sharp/lib/card..Card.fromArray) ⇒ <code>array.&lt;Card&gt;</code>
+        * [.fromArray(cards)]
 
-
-<br><a name="new_module_card-sharp/lib/card..Card_new"></a>
 
 #### new Card(user_opts)
-> Card constructor
+
+Card constructor
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| user_opts | <code>object</code> | User options for this card |
+| user_opts | `object` | User options for this card |
 
 
-<br><a name="module_card-sharp/lib/card..Card+toString"></a>
+#### card.toString()
 
-#### card.toString() ⇒ <code>string</code>
-> String conversion method
+String conversion method
 
-**Returns**: <code>string</code> - The card ID  
+**Kind**: instance method of [`Card`]  
+**Returns**: `string` - The card ID  
 
-<br><a name="module_card-sharp/lib/card..Card.fromArray"></a>
+#### Card.fromArray(cards)
 
-#### Card.fromArray(cards) ⇒ <code>array.&lt;Card&gt;</code>
-> Generate cards from an array of objects
+Generate cards from an array of objects
 
-**Returns**: <code>array.&lt;Card&gt;</code> - The generated cards  
+**Kind**: static method of [`Card`]  
+**Returns**: `array.<Card>` - The generated cards  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| cards | <code>array</code> | The list of card options |
+| cards | `array` | The list of card options |
 
+<!-- LINKS -->
+
+[card-sharp/lib/card]:#card-sharplibcard
+[~Card]:#card-sharplibcardcard
+[`card-sharp/lib/card`]:#card-sharplibcard
+[`Card`]:#new-carduser_opts
+[new Card(user_opts)]:#new-carduser_opts
+[.toString()]:#cardtostring
+[.fromArray(cards)]:#cardfromarraycards

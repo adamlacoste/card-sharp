@@ -1,283 +1,294 @@
 ## Modules
+Module | Description
+------ | -----------
+[card-sharp] | Main entrypoint module
+[card-sharp/lib/card] | Card module
+[card-sharp/lib/deck] | Deck module
+[card-sharp] | Main entrypoint module
 
-<dl>
-<dt><a href="#module_card-sharp">card-sharp</a></dt>
-<dd><p>Main entrypoint module</p>
-</dd>
-<dt><a href="#module_card-sharp/lib/card">card-sharp/lib/card</a></dt>
-<dd><p>Card module</p>
-</dd>
-<dt><a href="#module_card-sharp/lib/deck">card-sharp/lib/deck</a></dt>
-<dd><p>Deck module</p>
-</dd>
-<dt><a href="#module_card-sharp">card-sharp</a></dt>
-<dd><p>Main entrypoint module</p>
-</dd>
-</dl>
-
-
-<br><a name="module_card-sharp"></a>
 
 ## card-sharp
-> Main entrypoint module
 
-**Requires**: <code>module:deep-extend</code>, [<code>card-sharp/lib/card</code>](#module_card-sharp/lib/card), [<code>card-sharp/lib/deck</code>](#module_card-sharp/lib/deck)  
+Main entrypoint module
+
+**Requires**: `module:deep-extend`, [`card-sharp/lib/card`], [`card-sharp/lib/deck`]  
 **Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
-
-<br><a name="module_card-sharp/lib/card"></a>
 
 ## card-sharp/lib/card
-> Card module
 
-**Requires**: <code>module:assert</code>, <code>module:deep-extend</code>, <code>module:just-typeof</code>  
+Card module
+
+**Requires**: `module:assert`, `module:deep-extend`, `module:just-typeof`  
 **Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
 
-* [card-sharp/lib/card](#module_card-sharp/lib/card)
-    * [~Card](#module_card-sharp/lib/card..Card)
-        * [new Card(user_opts)](#new_module_card-sharp/lib/card..Card_new)
+* [card-sharp/lib/card]
+    * [~Card]
+        * [new Card(user_opts)]
         * _instance_
-            * [.toString()](#module_card-sharp/lib/card..Card+toString) ⇒ <code>string</code>
+            * [.toString()]
         * _static_
-            * [.fromArray(cards)](#module_card-sharp/lib/card..Card.fromArray) ⇒ <code>array.&lt;Card&gt;</code>
+            * [.fromArray(cards)]
 
-
-<br><a name="module_card-sharp/lib/card..Card"></a>
 
 ### card-sharp/lib/card~Card
-> Card class
-> 
->  A single French-style playing card.
 
+Card class
 
-* [~Card](#module_card-sharp/lib/card..Card)
-    * [new Card(user_opts)](#new_module_card-sharp/lib/card..Card_new)
+ A single French-style playing card.
+
+**Kind**: inner class of [`card-sharp/lib/card`]  
+
+* [~Card]
+    * [new Card(user_opts)]
     * _instance_
-        * [.toString()](#module_card-sharp/lib/card..Card+toString) ⇒ <code>string</code>
+        * [.toString()]
     * _static_
-        * [.fromArray(cards)](#module_card-sharp/lib/card..Card.fromArray) ⇒ <code>array.&lt;Card&gt;</code>
+        * [.fromArray(cards)]
 
-
-<br><a name="new_module_card-sharp/lib/card..Card_new"></a>
 
 #### new Card(user_opts)
-> Card constructor
+
+Card constructor
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| user_opts | <code>object</code> | User options for this card |
+| user_opts | `object` | User options for this card |
 
 
-<br><a name="module_card-sharp/lib/card..Card+toString"></a>
+#### card.toString()
 
-#### card.toString() ⇒ <code>string</code>
-> String conversion method
+String conversion method
 
-**Returns**: <code>string</code> - The card ID  
+**Kind**: instance method of [`Card`]  
+**Returns**: `string` - The card ID  
 
-<br><a name="module_card-sharp/lib/card..Card.fromArray"></a>
+#### Card.fromArray(cards)
 
-#### Card.fromArray(cards) ⇒ <code>array.&lt;Card&gt;</code>
-> Generate cards from an array of objects
+Generate cards from an array of objects
 
-**Returns**: <code>array.&lt;Card&gt;</code> - The generated cards  
+**Kind**: static method of [`Card`]  
+**Returns**: `array.<Card>` - The generated cards  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| cards | <code>array</code> | The list of card options |
+| cards | `array` | The list of card options |
 
-
-<br><a name="module_card-sharp/lib/deck"></a>
 
 ## card-sharp/lib/deck
-> Deck module
 
-**Requires**: <code>module:assert</code>, [<code>card-sharp/lib/card</code>](#module_card-sharp/lib/card), <code>module:knuth-shuffle</code>  
+Deck module
+
+**Requires**: `module:assert`, [`card-sharp/lib/card`], `module:knuth-shuffle`  
 **Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
 
-* [card-sharp/lib/deck](#module_card-sharp/lib/deck)
-    * [~Deck](#module_card-sharp/lib/deck..Deck)
-        * [new Deck(cards)](#new_module_card-sharp/lib/deck..Deck_new)
-        * [.add(cards)](#module_card-sharp/lib/deck..Deck+add) ⇒ <code>Deck</code>
-        * [.addOne(card)](#module_card-sharp/lib/deck..Deck+addOne) ⇒ <code>Deck</code>
-        * [.deal(num_cards, num_players)](#module_card-sharp/lib/deck..Deck+deal) ⇒ <code>array.&lt;array.&lt;Card&gt;&gt;</code>
-        * [.discard(cards)](#module_card-sharp/lib/deck..Deck+discard) ⇒ <code>Deck</code>
-        * [.discardOne(card)](#module_card-sharp/lib/deck..Deck+discardOne) ⇒ <code>Deck</code>
-        * [.draw(count)](#module_card-sharp/lib/deck..Deck+draw) ⇒ <code>array.&lt;Card&gt;</code>
-        * [.drawOne()](#module_card-sharp/lib/deck..Deck+drawOne) ⇒ <code>Card</code>
-        * [.remove(cards)](#module_card-sharp/lib/deck..Deck+remove) ⇒ <code>Deck</code>
-        * [.removeOne(card)](#module_card-sharp/lib/deck..Deck+removeOne) ⇒ <code>Deck</code>
-        * [.shuffle(include_discards)](#module_card-sharp/lib/deck..Deck+shuffle) ⇒ <code>Deck</code>
+* [card-sharp/lib/deck]
+    * [~Deck]
+        * [new Deck(cards)]
+        * [.add(cards)]
+        * [.addOne(card)]
+        * [.deal(num_cards, num_players)]
+        * [.discard(cards)]
+        * [.discardOne(card)]
+        * [.draw(count)]
+        * [.drawOne()]
+        * [.remove(cards)]
+        * [.removeOne(card)]
+        * [.shuffle(include_discards)]
 
-
-<br><a name="module_card-sharp/lib/deck..Deck"></a>
 
 ### card-sharp/lib/deck~Deck
-> Deck class
-> 
->  A deck of French-style playing cards.
 
+Deck class
 
-* [~Deck](#module_card-sharp/lib/deck..Deck)
-    * [new Deck(cards)](#new_module_card-sharp/lib/deck..Deck_new)
-    * [.add(cards)](#module_card-sharp/lib/deck..Deck+add) ⇒ <code>Deck</code>
-    * [.addOne(card)](#module_card-sharp/lib/deck..Deck+addOne) ⇒ <code>Deck</code>
-    * [.deal(num_cards, num_players)](#module_card-sharp/lib/deck..Deck+deal) ⇒ <code>array.&lt;array.&lt;Card&gt;&gt;</code>
-    * [.discard(cards)](#module_card-sharp/lib/deck..Deck+discard) ⇒ <code>Deck</code>
-    * [.discardOne(card)](#module_card-sharp/lib/deck..Deck+discardOne) ⇒ <code>Deck</code>
-    * [.draw(count)](#module_card-sharp/lib/deck..Deck+draw) ⇒ <code>array.&lt;Card&gt;</code>
-    * [.drawOne()](#module_card-sharp/lib/deck..Deck+drawOne) ⇒ <code>Card</code>
-    * [.remove(cards)](#module_card-sharp/lib/deck..Deck+remove) ⇒ <code>Deck</code>
-    * [.removeOne(card)](#module_card-sharp/lib/deck..Deck+removeOne) ⇒ <code>Deck</code>
-    * [.shuffle(include_discards)](#module_card-sharp/lib/deck..Deck+shuffle) ⇒ <code>Deck</code>
+ A deck of French-style playing cards.
 
+**Kind**: inner class of [`card-sharp/lib/deck`]  
 
-<br><a name="new_module_card-sharp/lib/deck..Deck_new"></a>
+* [~Deck]
+    * [new Deck(cards)]
+    * [.add(cards)]
+    * [.addOne(card)]
+    * [.deal(num_cards, num_players)]
+    * [.discard(cards)]
+    * [.discardOne(card)]
+    * [.draw(count)]
+    * [.drawOne()]
+    * [.remove(cards)]
+    * [.removeOne(card)]
+    * [.shuffle(include_discards)]
+
 
 #### new Deck(cards)
-> Deck constructor
+
+Deck constructor
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| cards | <code>array</code> | The cards to add to the deck |
+| cards | `array` | The cards to add to the deck |
 
 
-<br><a name="module_card-sharp/lib/deck..Deck+add"></a>
+#### deck.add(cards)
 
-#### deck.add(cards) ⇒ <code>Deck</code>
-> Add one or more cards to the deck
+Add one or more cards to the deck
 
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to add |
-
-
-<br><a name="module_card-sharp/lib/deck..Deck+addOne"></a>
-
-#### deck.addOne(card) ⇒ <code>Deck</code>
-> Add one (and only one) card to the deck
-
-**Returns**: <code>Deck</code> - This deck  
+**Kind**: instance method of [`Deck`]  
+**Returns**: [`Deck`] - This deck  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| card | <code>Card</code> | The card to add |
+| cards | `array` | The cards to add |
 
 
-<br><a name="module_card-sharp/lib/deck..Deck+deal"></a>
+#### deck.addOne(card)
 
-#### deck.deal(num_cards, num_players) ⇒ <code>array.&lt;array.&lt;Card&gt;&gt;</code>
-> Deal one or more cards to multiple players
-> 
->  A card is dealt to each player in turn.  If multiple cards are to be 
->  dealt to each player, the first player doesn't get a second card until 
->  every other player has gotten one.
-> 
->  When dealing three cards each to three players (A, B, and C), the order 
->  of cards dealt would be A, B, C, A, B, C, A, B, C.
-> 
->  The output is organized by player:
-> 
->      [
->          [ card1, card4, card7 ], // player A's cards
->          [ card2, card5, card8 ], // player B's cards
->          [ card3, card6, card9 ]  // player C's cards
->      ]
+Add one (and only one) card to the deck
 
-**Returns**: <code>array.&lt;array.&lt;Card&gt;&gt;</code> - A nested array of cards  
+**Kind**: instance method of [`Deck`]  
+**Returns**: [`Deck`] - This deck  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| card | [`Card`] | The card to add |
+
+
+#### deck.deal(num_cards, num_players)
+
+Deal one or more cards to multiple players
+
+ A card is dealt to each player in turn.  If multiple cards are to be 
+ dealt to each player, the first player doesn't get a second card until 
+ every other player has gotten one.
+
+ When dealing three cards each to three players (A, B, and C), the order 
+ of cards dealt would be A, B, C, A, B, C, A, B, C.
+
+ The output is organized by player:
+
+     [
+         [ card1, card4, card7 ], // player A's cards
+         [ card2, card5, card8 ], // player B's cards
+         [ card3, card6, card9 ]  // player C's cards
+     ]
+
+**Kind**: instance method of [`Deck`][1]  
+**Returns**: `array.<array.<Card>>` - A nested array of cards  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| num_cards | <code>number</code> | <code>1</code> | The number of cards to deal to each player |
-| num_players | <code>number</code> | <code>1</code> | The number of players who get cards |
+| num_cards | `number` | `1` | The number of cards to deal to each player |
+| num_players | `number` | `1` | The number of players who get cards |
 
 
-<br><a name="module_card-sharp/lib/deck..Deck+discard"></a>
+#### deck.discard(cards)
 
-#### deck.discard(cards) ⇒ <code>Deck</code>
-> Discard one or more cards
+Discard one or more cards
 
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to discard |
-
-
-<br><a name="module_card-sharp/lib/deck..Deck+discardOne"></a>
-
-#### deck.discardOne(card) ⇒ <code>Deck</code>
-> Discard one (and only one) card
-
-**Returns**: <code>Deck</code> - This deck  
+**Kind**: instance method of [`Deck`]  
+**Returns**: [`Deck`] - This deck  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| card | <code>Card</code> | The card to discard |
+| cards | `array` | The cards to discard |
 
 
-<br><a name="module_card-sharp/lib/deck..Deck+draw"></a>
+#### deck.discardOne(card)
 
-#### deck.draw(count) ⇒ <code>array.&lt;Card&gt;</code>
-> Draw one or more cards from the deck
+Discard one (and only one) card
 
-**Returns**: <code>array.&lt;Card&gt;</code> - The drawn cards  
+**Kind**: instance method of [`Deck`]  
+**Returns**: [`Deck`] - This deck  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| card | [`Card`] | The card to discard |
+
+
+#### deck.draw(count)
+
+Draw one or more cards from the deck
+
+**Kind**: instance method of [`Deck`]  
+**Returns**: `array.<Card>` - The drawn cards  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| count | <code>number</code> | <code>1</code> | The number of cards to draw |
+| count | `number` | `1` | The number of cards to draw |
 
 
-<br><a name="module_card-sharp/lib/deck..Deck+drawOne"></a>
+#### deck.drawOne()
 
-#### deck.drawOne() ⇒ <code>Card</code>
-> Draw one (and only one) card from the deck
+Draw one (and only one) card from the deck
 
-**Returns**: <code>Card</code> - The drawn card  
+**Kind**: instance method of [`Deck`]  
+**Returns**: [`Card`] - The drawn card  
 
-<br><a name="module_card-sharp/lib/deck..Deck+remove"></a>
+#### deck.remove(cards)
 
-#### deck.remove(cards) ⇒ <code>Deck</code>
-> Remove one or more cards from the deck
+Remove one or more cards from the deck
 
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to remove |
-
-
-<br><a name="module_card-sharp/lib/deck..Deck+removeOne"></a>
-
-#### deck.removeOne(card) ⇒ <code>Deck</code>
-> Remove one (and only one) card from the deck
-
-**Returns**: <code>Deck</code> - This deck  
+**Kind**: instance method of [`Deck`]  
+**Returns**: [`Deck`] - This deck  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| card | <code>Card</code> | The card to remove |
+| cards | `array` | The cards to remove |
 
 
-<br><a name="module_card-sharp/lib/deck..Deck+shuffle"></a>
+#### deck.removeOne(card)
 
-#### deck.shuffle(include_discards) ⇒ <code>Deck</code>
-> Shuffle the deck
+Remove one (and only one) card from the deck
 
-**Returns**: <code>Deck</code> - This (shuffled) deck  
+**Kind**: instance method of [`Deck`]  
+**Returns**: [`Deck`] - This deck  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| card | [`Card`] | The card to remove |
+
+
+#### deck.shuffle(include_discards)
+
+Shuffle the deck
+
+**Kind**: instance method of [`Deck`]  
+**Returns**: [`Deck`] - This (shuffled) deck  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| include_discards | <code>bool</code> | <code>false</code> | Return all cards from the discard pile                                   to the deck prior to shuffling |
+| include_discards | `bool` | `false` | Return all cards from the discard pile                                   to the deck prior to shuffling |
 
-
-<br><a name="module_card-sharp"></a>
 
 ## card-sharp
-> Main entrypoint module
 
-**Requires**: <code>module:deep-extend</code>, [<code>card-sharp/lib/card</code>](#module_card-sharp/lib/card), [<code>card-sharp/lib/deck</code>](#module_card-sharp/lib/deck)  
+Main entrypoint module
+
+**Requires**: `module:deep-extend`, [`card-sharp/lib/card`], [`card-sharp/lib/deck`]  
 **Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
+<!-- LINKS -->
+
+[card-sharp]:#card-sharp
+[card-sharp/lib/card]:#card-sharplibcard
+[card-sharp/lib/deck]:#card-sharplibdeck
+[`card-sharp/lib/card`]:#card-sharplibcard
+[`card-sharp/lib/deck`]:#card-sharplibdeck
+[~Card]:#card-sharplibcardcard
+[`Card`]:#new-carduser_opts
+[~Deck]:#card-sharplibdeckdeck
+[`Deck`]:#new-deckcards
+[1]:#new-deckcards
+[new Card(user_opts)]:#new-carduser_opts
+[.toString()]:#cardtostring
+[.fromArray(cards)]:#cardfromarraycards
+[new Deck(cards)]:#new-deckcards
+[.add(cards)]:#deckaddcards
+[.addOne(card)]:#deckaddonecard
+[.deal(num_cards, num_players)]:#deckdealnum_cards-num_players
+[.discard(cards)]:#deckdiscardcards
+[.discardOne(card)]:#deckdiscardonecard
+[.draw(count)]:#deckdrawcount
+[.drawOne()]:#deckdrawone
+[.remove(cards)]:#deckremovecards
+[.removeOne(card)]:#deckremoveonecard
+[.shuffle(include_discards)]:#deckshuffleinclude_discards
