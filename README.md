@@ -111,58 +111,30 @@ Card class
 
  A single French-style playing card.
 
-<a name="new_module_card-sharp/lib/card..Card_new"></a>
+
+<br><a name="new_module_card-sharp/lib/card..Card_new"></a>
 
 ### new Card(user_opts)
-Card constructor
+> Card constructor
 
 
 | Param | Type | Description |
 | --- | --- | --- |
 | user_opts | <code>object</code> | User options for this card |
 
-<a name="new_module_card-sharp/lib/card..Card_new"></a>
 
-### new Card(user_opts)
-Card constructor
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| user_opts | <code>object</code> | User options for this card |
-
-<a name="module_card-sharp/lib/card..Card+toString"></a>
+<br><a name="module_card-sharp/lib/card..Card+toString"></a>
 
 ### card.toString() ⇒ <code>string</code>
-String conversion method
+> String conversion method
 
-**Kind**: instance method of [<code>Card</code>](#module_card-sharp/lib/card..Card)  
 **Returns**: <code>string</code> - The card ID  
-<a name="module_card-sharp/lib/card..Card+toString"></a>
 
-### card.toString() ⇒ <code>string</code>
-String conversion method
-
-**Kind**: instance method of [<code>Card</code>](#module_card-sharp/lib/card..Card)  
-**Returns**: <code>string</code> - The card ID  
-<a name="module_card-sharp/lib/card..Card.fromArray"></a>
+<br><a name="module_card-sharp/lib/card..Card.fromArray"></a>
 
 ### Card.fromArray(cards) ⇒ <code>array.&lt;Card&gt;</code>
-Generate cards from an array of objects
+> Generate cards from an array of objects
 
-**Kind**: static method of [<code>Card</code>](#module_card-sharp/lib/card..Card)  
-**Returns**: <code>array.&lt;Card&gt;</code> - The generated cards  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The list of card options |
-
-<a name="module_card-sharp/lib/card..Card.fromArray"></a>
-
-### Card.fromArray(cards) ⇒ <code>array.&lt;Card&gt;</code>
-Generate cards from an array of objects
-
-**Kind**: static method of [<code>Card</code>](#module_card-sharp/lib/card..Card)  
 **Returns**: <code>array.&lt;Card&gt;</code> - The generated cards  
 
 | Param | Type | Description |
@@ -176,71 +148,62 @@ Deck class
 
  A deck of French-style playing cards.
 
-<a name="new_module_card-sharp/lib/deck..Deck_new"></a>
+
+<br><a name="new_module_card-sharp/lib/deck..Deck_new"></a>
 
 ### new Deck(cards)
-Deck constructor
+> Deck constructor
 
 
 | Param | Type | Description |
 | --- | --- | --- |
 | cards | <code>array</code> | The cards to add to the deck |
 
-<a name="new_module_card-sharp/lib/deck..Deck_new"></a>
 
-### new Deck(cards)
-Deck constructor
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to add to the deck |
-
-<a name="module_card-sharp/lib/deck..Deck+add"></a>
+<br><a name="module_card-sharp/lib/deck..Deck+add"></a>
 
 ### deck.add(cards) ⇒ <code>Deck</code>
-Add one or more cards to the deck
+> Add one or more cards to the deck
 
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>Deck</code> - This deck  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | cards | <code>array</code> | The cards to add |
 
-<a name="module_card-sharp/lib/deck..Deck+addOne"></a>
+
+<br><a name="module_card-sharp/lib/deck..Deck+addOne"></a>
 
 ### deck.addOne(card) ⇒ <code>Deck</code>
-Add one (and only one) card to the deck
+> Add one (and only one) card to the deck
 
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>Deck</code> - This deck  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | card | <code>Card</code> | The card to add |
 
-<a name="module_card-sharp/lib/deck..Deck+deal"></a>
+
+<br><a name="module_card-sharp/lib/deck..Deck+deal"></a>
 
 ### deck.deal(num_cards, num_players) ⇒ <code>array.&lt;array.&lt;Card&gt;&gt;</code>
-Deal one or more cards to multiple players
+> Deal one or more cards to multiple players
+> 
+>  A card is dealt to each player in turn.  If multiple cards are to be 
+>  dealt to each player, the first player doesn't get a second card until 
+>  every other player has gotten one.
+> 
+>  When dealing three cards each to three players (A, B, and C), the order 
+>  of cards dealt would be A, B, C, A, B, C, A, B, C.
+> 
+>  The output is organized by player:
+> 
+>      [
+>          [ card1, card4, card7 ], // player A's cards
+>          [ card2, card5, card8 ], // player B's cards
+>          [ card3, card6, card9 ]  // player C's cards
+>      ]
 
- A card is dealt to each player in turn.  If multiple cards are to be 
- dealt to each player, the first player doesn't get a second card until 
- every other player has gotten one.
-
- When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
-
- The output is organized by player:
-
-     [
-         [ card1, card4, card7 ], // player A's cards
-         [ card2, card5, card8 ], // player B's cards
-         [ card3, card6, card9 ]  // player C's cards
-     ]
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>array.&lt;array.&lt;Card&gt;&gt;</code> - A nested array of cards  
 
 | Param | Type | Default | Description |
@@ -248,564 +211,79 @@ Deal one or more cards to multiple players
 | num_cards | <code>number</code> | <code>1</code> | The number of cards to deal to each player |
 | num_players | <code>number</code> | <code>1</code> | The number of players who get cards |
 
-<a name="module_card-sharp/lib/deck..Deck+discard"></a>
+
+<br><a name="module_card-sharp/lib/deck..Deck+discard"></a>
 
 ### deck.discard(cards) ⇒ <code>Deck</code>
-Discard one or more cards
+> Discard one or more cards
 
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>Deck</code> - This deck  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | cards | <code>array</code> | The cards to discard |
 
-<a name="module_card-sharp/lib/deck..Deck+discardOne"></a>
+
+<br><a name="module_card-sharp/lib/deck..Deck+discardOne"></a>
 
 ### deck.discardOne(card) ⇒ <code>Deck</code>
-Discard one (and only one) card
+> Discard one (and only one) card
 
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>Deck</code> - This deck  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | card | <code>Card</code> | The card to discard |
 
-<a name="module_card-sharp/lib/deck..Deck+draw"></a>
+
+<br><a name="module_card-sharp/lib/deck..Deck+draw"></a>
 
 ### deck.draw(count) ⇒ <code>array.&lt;Card&gt;</code>
-Draw one or more cards from the deck
+> Draw one or more cards from the deck
 
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>array.&lt;Card&gt;</code> - The drawn cards  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | count | <code>number</code> | <code>1</code> | The number of cards to draw |
 
-<a name="module_card-sharp/lib/deck..Deck+drawOne"></a>
+
+<br><a name="module_card-sharp/lib/deck..Deck+drawOne"></a>
 
 ### deck.drawOne() ⇒ <code>Card</code>
-Draw one (and only one) card from the deck
+> Draw one (and only one) card from the deck
 
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>Card</code> - The drawn card  
-<a name="module_card-sharp/lib/deck..Deck+remove"></a>
+
+<br><a name="module_card-sharp/lib/deck..Deck+remove"></a>
 
 ### deck.remove(cards) ⇒ <code>Deck</code>
-Remove one or more cards from the deck
+> Remove one or more cards from the deck
 
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>Deck</code> - This deck  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | cards | <code>array</code> | The cards to remove |
 
-<a name="module_card-sharp/lib/deck..Deck+removeOne"></a>
+
+<br><a name="module_card-sharp/lib/deck..Deck+removeOne"></a>
 
 ### deck.removeOne(card) ⇒ <code>Deck</code>
-Remove one (and only one) card from the deck
+> Remove one (and only one) card from the deck
 
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>Deck</code> - This deck  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | card | <code>Card</code> | The card to remove |
 
-<a name="module_card-sharp/lib/deck..Deck+shuffle"></a>
+
+<br><a name="module_card-sharp/lib/deck..Deck+shuffle"></a>
 
 ### deck.shuffle(include_discards) ⇒ <code>Deck</code>
-Shuffle the deck
+> Shuffle the deck
 
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This (shuffled) deck  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| include_discards | <code>bool</code> | <code>false</code> | Return all cards from the discard pile                                   to the deck prior to shuffling |
-
-<a name="module_card-sharp/lib/deck..Deck+add"></a>
-
-### deck.add(cards) ⇒ <code>Deck</code>
-Add one or more cards to the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to add |
-
-<a name="module_card-sharp/lib/deck..Deck+addOne"></a>
-
-### deck.addOne(card) ⇒ <code>Deck</code>
-Add one (and only one) card to the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| card | <code>Card</code> | The card to add |
-
-<a name="module_card-sharp/lib/deck..Deck+deal"></a>
-
-### deck.deal(num_cards, num_players) ⇒ <code>array.&lt;array.&lt;Card&gt;&gt;</code>
-Deal one or more cards to multiple players
-
- A card is dealt to each player in turn.  If multiple cards are to be 
- dealt to each player, the first player doesn't get a second card until 
- every other player has gotten one.
-
- When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
-
- The output is organized by player:
-
-     [
-         [ card1, card4, card7 ], // player A's cards
-         [ card2, card5, card8 ], // player B's cards
-         [ card3, card6, card9 ]  // player C's cards
-     ]
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>array.&lt;array.&lt;Card&gt;&gt;</code> - A nested array of cards  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| num_cards | <code>number</code> | <code>1</code> | The number of cards to deal to each player |
-| num_players | <code>number</code> | <code>1</code> | The number of players who get cards |
-
-<a name="module_card-sharp/lib/deck..Deck+discard"></a>
-
-### deck.discard(cards) ⇒ <code>Deck</code>
-Discard one or more cards
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to discard |
-
-<a name="module_card-sharp/lib/deck..Deck+discardOne"></a>
-
-### deck.discardOne(card) ⇒ <code>Deck</code>
-Discard one (and only one) card
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| card | <code>Card</code> | The card to discard |
-
-<a name="module_card-sharp/lib/deck..Deck+draw"></a>
-
-### deck.draw(count) ⇒ <code>array.&lt;Card&gt;</code>
-Draw one or more cards from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>array.&lt;Card&gt;</code> - The drawn cards  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| count | <code>number</code> | <code>1</code> | The number of cards to draw |
-
-<a name="module_card-sharp/lib/deck..Deck+drawOne"></a>
-
-### deck.drawOne() ⇒ <code>Card</code>
-Draw one (and only one) card from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Card</code> - The drawn card  
-<a name="module_card-sharp/lib/deck..Deck+remove"></a>
-
-### deck.remove(cards) ⇒ <code>Deck</code>
-Remove one or more cards from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to remove |
-
-<a name="module_card-sharp/lib/deck..Deck+removeOne"></a>
-
-### deck.removeOne(card) ⇒ <code>Deck</code>
-Remove one (and only one) card from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| card | <code>Card</code> | The card to remove |
-
-<a name="module_card-sharp/lib/deck..Deck+shuffle"></a>
-
-### deck.shuffle(include_discards) ⇒ <code>Deck</code>
-Shuffle the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This (shuffled) deck  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| include_discards | <code>bool</code> | <code>false</code> | Return all cards from the discard pile                                   to the deck prior to shuffling |
-
-
-## Card API
-
-Card class
-
- A single French-style playing card.
-
-<a name="new_module_card-sharp/lib/card..Card_new"></a>
-
-### new Card(user_opts)
-Card constructor
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| user_opts | <code>object</code> | User options for this card |
-
-<a name="new_module_card-sharp/lib/card..Card_new"></a>
-
-### new Card(user_opts)
-Card constructor
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| user_opts | <code>object</code> | User options for this card |
-
-<a name="module_card-sharp/lib/card..Card+toString"></a>
-
-### card.toString() ⇒ <code>string</code>
-String conversion method
-
-**Kind**: instance method of [<code>Card</code>](#module_card-sharp/lib/card..Card)  
-**Returns**: <code>string</code> - The card ID  
-<a name="module_card-sharp/lib/card..Card+toString"></a>
-
-### card.toString() ⇒ <code>string</code>
-String conversion method
-
-**Kind**: instance method of [<code>Card</code>](#module_card-sharp/lib/card..Card)  
-**Returns**: <code>string</code> - The card ID  
-<a name="module_card-sharp/lib/card..Card.fromArray"></a>
-
-### Card.fromArray(cards) ⇒ <code>array.&lt;Card&gt;</code>
-Generate cards from an array of objects
-
-**Kind**: static method of [<code>Card</code>](#module_card-sharp/lib/card..Card)  
-**Returns**: <code>array.&lt;Card&gt;</code> - The generated cards  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The list of card options |
-
-<a name="module_card-sharp/lib/card..Card.fromArray"></a>
-
-### Card.fromArray(cards) ⇒ <code>array.&lt;Card&gt;</code>
-Generate cards from an array of objects
-
-**Kind**: static method of [<code>Card</code>](#module_card-sharp/lib/card..Card)  
-**Returns**: <code>array.&lt;Card&gt;</code> - The generated cards  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The list of card options |
-
-
-## Deck API
-
-Deck class
-
- A deck of French-style playing cards.
-
-<a name="new_module_card-sharp/lib/deck..Deck_new"></a>
-
-### new Deck(cards)
-Deck constructor
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to add to the deck |
-
-<a name="new_module_card-sharp/lib/deck..Deck_new"></a>
-
-### new Deck(cards)
-Deck constructor
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to add to the deck |
-
-<a name="module_card-sharp/lib/deck..Deck+add"></a>
-
-### deck.add(cards) ⇒ <code>Deck</code>
-Add one or more cards to the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to add |
-
-<a name="module_card-sharp/lib/deck..Deck+addOne"></a>
-
-### deck.addOne(card) ⇒ <code>Deck</code>
-Add one (and only one) card to the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| card | <code>Card</code> | The card to add |
-
-<a name="module_card-sharp/lib/deck..Deck+deal"></a>
-
-### deck.deal(num_cards, num_players) ⇒ <code>array.&lt;array.&lt;Card&gt;&gt;</code>
-Deal one or more cards to multiple players
-
- A card is dealt to each player in turn.  If multiple cards are to be 
- dealt to each player, the first player doesn't get a second card until 
- every other player has gotten one.
-
- When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
-
- The output is organized by player:
-
-     [
-         [ card1, card4, card7 ], // player A's cards
-         [ card2, card5, card8 ], // player B's cards
-         [ card3, card6, card9 ]  // player C's cards
-     ]
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>array.&lt;array.&lt;Card&gt;&gt;</code> - A nested array of cards  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| num_cards | <code>number</code> | <code>1</code> | The number of cards to deal to each player |
-| num_players | <code>number</code> | <code>1</code> | The number of players who get cards |
-
-<a name="module_card-sharp/lib/deck..Deck+discard"></a>
-
-### deck.discard(cards) ⇒ <code>Deck</code>
-Discard one or more cards
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to discard |
-
-<a name="module_card-sharp/lib/deck..Deck+discardOne"></a>
-
-### deck.discardOne(card) ⇒ <code>Deck</code>
-Discard one (and only one) card
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| card | <code>Card</code> | The card to discard |
-
-<a name="module_card-sharp/lib/deck..Deck+draw"></a>
-
-### deck.draw(count) ⇒ <code>array.&lt;Card&gt;</code>
-Draw one or more cards from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>array.&lt;Card&gt;</code> - The drawn cards  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| count | <code>number</code> | <code>1</code> | The number of cards to draw |
-
-<a name="module_card-sharp/lib/deck..Deck+drawOne"></a>
-
-### deck.drawOne() ⇒ <code>Card</code>
-Draw one (and only one) card from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Card</code> - The drawn card  
-<a name="module_card-sharp/lib/deck..Deck+remove"></a>
-
-### deck.remove(cards) ⇒ <code>Deck</code>
-Remove one or more cards from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to remove |
-
-<a name="module_card-sharp/lib/deck..Deck+removeOne"></a>
-
-### deck.removeOne(card) ⇒ <code>Deck</code>
-Remove one (and only one) card from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| card | <code>Card</code> | The card to remove |
-
-<a name="module_card-sharp/lib/deck..Deck+shuffle"></a>
-
-### deck.shuffle(include_discards) ⇒ <code>Deck</code>
-Shuffle the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This (shuffled) deck  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| include_discards | <code>bool</code> | <code>false</code> | Return all cards from the discard pile                                   to the deck prior to shuffling |
-
-<a name="module_card-sharp/lib/deck..Deck+add"></a>
-
-### deck.add(cards) ⇒ <code>Deck</code>
-Add one or more cards to the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to add |
-
-<a name="module_card-sharp/lib/deck..Deck+addOne"></a>
-
-### deck.addOne(card) ⇒ <code>Deck</code>
-Add one (and only one) card to the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| card | <code>Card</code> | The card to add |
-
-<a name="module_card-sharp/lib/deck..Deck+deal"></a>
-
-### deck.deal(num_cards, num_players) ⇒ <code>array.&lt;array.&lt;Card&gt;&gt;</code>
-Deal one or more cards to multiple players
-
- A card is dealt to each player in turn.  If multiple cards are to be 
- dealt to each player, the first player doesn't get a second card until 
- every other player has gotten one.
-
- When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
-
- The output is organized by player:
-
-     [
-         [ card1, card4, card7 ], // player A's cards
-         [ card2, card5, card8 ], // player B's cards
-         [ card3, card6, card9 ]  // player C's cards
-     ]
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>array.&lt;array.&lt;Card&gt;&gt;</code> - A nested array of cards  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| num_cards | <code>number</code> | <code>1</code> | The number of cards to deal to each player |
-| num_players | <code>number</code> | <code>1</code> | The number of players who get cards |
-
-<a name="module_card-sharp/lib/deck..Deck+discard"></a>
-
-### deck.discard(cards) ⇒ <code>Deck</code>
-Discard one or more cards
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to discard |
-
-<a name="module_card-sharp/lib/deck..Deck+discardOne"></a>
-
-### deck.discardOne(card) ⇒ <code>Deck</code>
-Discard one (and only one) card
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| card | <code>Card</code> | The card to discard |
-
-<a name="module_card-sharp/lib/deck..Deck+draw"></a>
-
-### deck.draw(count) ⇒ <code>array.&lt;Card&gt;</code>
-Draw one or more cards from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>array.&lt;Card&gt;</code> - The drawn cards  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| count | <code>number</code> | <code>1</code> | The number of cards to draw |
-
-<a name="module_card-sharp/lib/deck..Deck+drawOne"></a>
-
-### deck.drawOne() ⇒ <code>Card</code>
-Draw one (and only one) card from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Card</code> - The drawn card  
-<a name="module_card-sharp/lib/deck..Deck+remove"></a>
-
-### deck.remove(cards) ⇒ <code>Deck</code>
-Remove one or more cards from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| cards | <code>array</code> | The cards to remove |
-
-<a name="module_card-sharp/lib/deck..Deck+removeOne"></a>
-
-### deck.removeOne(card) ⇒ <code>Deck</code>
-Remove one (and only one) card from the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
-**Returns**: <code>Deck</code> - This deck  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| card | <code>Card</code> | The card to remove |
-
-<a name="module_card-sharp/lib/deck..Deck+shuffle"></a>
-
-### deck.shuffle(include_discards) ⇒ <code>Deck</code>
-Shuffle the deck
-
-**Kind**: instance method of [<code>Deck</code>](#module_card-sharp/lib/deck..Deck)  
 **Returns**: <code>Deck</code> - This (shuffled) deck  
 
 | Param | Type | Default | Description |

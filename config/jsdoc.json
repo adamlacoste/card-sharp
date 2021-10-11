@@ -1,6 +1,5 @@
 {
   "source": {
-    "include": [ "lib/" ],
-    "includePattern": "\\.[cm]?js$"
+    "includePattern": "^lib/.+\\.[cm]?js$"
   }
 }
