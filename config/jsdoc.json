@@ -1,0 +1,6 @@
+{
+  "source": {
+    "include": [ "lib/", "main.mjs" ],
+    "includePattern": "\\.[cm]?js$"
+  }
+}
