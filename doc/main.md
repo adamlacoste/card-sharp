@@ -1,8 +1,8 @@
 ## Modules
 
 <dl>
-<dt><a href="#module_card-sharp">card-sharp</a></dt>
-<dd><p>Main entrypoint module</p>
+<dt><a href="#module_card-sharp/mjs">card-sharp/mjs</a></dt>
+<dd><p>Main entrypoint (ESM) module</p>
 </dd>
 <dt><a href="#module_card-sharp/lib/card">card-sharp/lib/card</a></dt>
 <dd><p>Card module</p>
@@ -10,15 +10,15 @@
 <dt><a href="#module_card-sharp/lib/deck">card-sharp/lib/deck</a></dt>
 <dd><p>Deck module</p>
 </dd>
-<dt><a href="#module_card-sharp">card-sharp</a></dt>
-<dd><p>Main entrypoint module</p>
+<dt><a href="#module_card-sharp/mjs">card-sharp/mjs</a></dt>
+<dd><p>Main entrypoint (ESM) module</p>
 </dd>
 </dl>
 
-<a name="module_card-sharp"></a>
+<a name="module_card-sharp/mjs"></a>
 
-## card-sharp
-Main entrypoint module
+## card-sharp/mjs
+Main entrypoint (ESM) module
 
 **Requires**: <code>module:deep-extend</code>, [<code>card-sharp/lib/card</code>](#module_card-sharp/lib/card), [<code>card-sharp/lib/deck</code>](#module_card-sharp/lib/deck)  
 **Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
@@ -171,7 +171,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
@@ -268,10 +268,10 @@ Shuffle the deck
 | --- | --- | --- | --- |
 | include_discards | <code>bool</code> | <code>false</code> | Return all cards from the discard pile                                   to the deck prior to shuffling |
 
-<a name="module_card-sharp"></a>
+<a name="module_card-sharp/mjs"></a>
 
-## card-sharp
-Main entrypoint module
+## card-sharp/mjs
+Main entrypoint (ESM) module
 
 **Requires**: <code>module:deep-extend</code>, [<code>card-sharp/lib/card</code>](#module_card-sharp/lib/card), [<code>card-sharp/lib/deck</code>](#module_card-sharp/lib/deck)  
 **Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
