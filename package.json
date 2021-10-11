@@ -29,11 +29,6 @@
     "knuth-shuffle": "^1.0.8"
   },
   "devDependencies": {
-    "@godaddy/dmd": "^1.0.3",
-    "dmd-bitbucket": "^0.1.10",
-    "dmd-clean": "^0.1.1",
-    "dmd-clear": "^0.1.2",
-    "dmd-readable": "^1.2.4",
     "eslint": "^7.32.0",
     "jest": "^27.2.5",
     "jsdoc-to-markdown": "^7.0.1"
