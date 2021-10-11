@@ -108,16 +108,31 @@ let custom_deck = init(custom_card_set);
 ## Modules
 
 <dl>
+<dt><a href="#module_card-sharp/cjs">card-sharp/cjs</a></dt>
+<dd><p>Main entrypoint (CommonJS) module</p>
+</dd>
+<dt><a href="#module_card-sharp/mjs">card-sharp/mjs</a></dt>
+<dd><p>Main entrypoint (ESM) module</p>
+</dd>
 <dt><a href="#module_card-sharp/lib/card">card-sharp/lib/card</a></dt>
 <dd><p>Card module</p>
 </dd>
 <dt><a href="#module_card-sharp/lib/deck">card-sharp/lib/deck</a></dt>
 <dd><p>Deck module</p>
 </dd>
-<dt><a href="#module_card-sharp">card-sharp</a></dt>
-<dd><p>Main entrypoint module</p>
-</dd>
 </dl>
+
+<a name="module_card-sharp/cjs"></a>
+
+## card-sharp/cjs
+**Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
+Main entrypoint (CommonJS) module
+
+<a name="module_card-sharp/mjs"></a>
+
+## card-sharp/mjs
+**Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
+Main entrypoint (ESM) module
 
 <a name="module_card-sharp/lib/card"></a>
 
@@ -300,7 +315,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
@@ -383,9 +398,3 @@ Remove one (and only one) card from the deck
 Shuffle the deck
 
 **Returns**: <code>Deck</code> - This (shuffled) deck  
-<a name="module_card-sharp"></a>
-
-## card-sharp
-**Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
-Main entrypoint module
-

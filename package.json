@@ -19,7 +19,7 @@
   },
   "type": "module",
   "scripts": {
-    "doc": "./node_modules/.bin/jsdoc2md -c config/jsdoc.json -f . --plugin dmd-clear --template doc/template.hbs > README.md",
+    "doc": "./scripts/generate_docs.sh",
     "lint": "./node_modules/.bin/eslint -c config/eslint.json",
     "postversion": "git push --tags origin main",
     "preversion": "npm run lint -- lib/* && npm test && npm run doc",
