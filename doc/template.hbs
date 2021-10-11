@@ -105,4 +105,13 @@ const custom_card_set = [ { "rank": "a", "suit": "c" }, { "rank": "2", "suit": "
 let custom_deck = init(custom_card_set);
 ```
 
-{{>main}}
+{{#classes}}
+## {{name}} API
+
+{{description}}
+
+{{#children}}
+{{>docs}}
+{{/children}}
+
+{{/classes}}
