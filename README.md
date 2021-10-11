@@ -1,5 +1,7 @@
 # Card Sharp
 
+![](https://raw.githubusercontent.com/adamlacoste/vector-playing-cards/bd9cfc6f13674fe9d4c0bd32a5c9ca2c1b56185d/jack_of_clubs.svg) ![](https://raw.githubusercontent.com/adamlacoste/vector-playing-cards/bd9cfc6f13674fe9d4c0bd32a5c9ca2c1b56185d/queen_of_diamonds.svg) ![](https://raw.githubusercontent.com/adamlacoste/vector-playing-cards/bd9cfc6f13674fe9d4c0bd32a5c9ca2c1b56185d/king_of_hearts.svg) ![](https://raw.githubusercontent.com/adamlacoste/vector-playing-cards/bd9cfc6f13674fe9d4c0bd32a5c9ca2c1b56185d/ace_of_spades.svg)
+
 **Card Sharp** is a utility for simulating a deck of playing cards in Node.js.  
 It is a work in progress and may change significantly before it reaches version 
 1.0.
