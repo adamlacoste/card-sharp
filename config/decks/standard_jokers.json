@@ -51,6 +51,6 @@
     { "rank": "j",  "suit": "s" },
     { "rank": "q",  "suit": "s" },
     { "rank": "k",  "suit": "s" },
-    { "rank": "b",  "suit": "j", "id": "bj", "name": "black joker" },
-    { "rank": "r",  "suit": "j", "id": "rj", "name": "red joker" }
+    { "rank": null, "suit": "j", "id": "bj", "name": "black joker" },
+    { "rank": null, "suit": "j", "id": "rj", "name": "red joker" }
 ]
