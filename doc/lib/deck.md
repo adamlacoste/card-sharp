@@ -158,7 +158,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
@@ -289,7 +289,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
@@ -473,7 +473,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
@@ -604,7 +604,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
@@ -905,7 +905,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
@@ -1036,7 +1036,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
@@ -1220,7 +1220,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
@@ -1351,7 +1351,7 @@ Deal one or more cards to multiple players
  every other player has gotten one.
 
  When dealing three cards each to three players (A, B, and C), the order 
- of cards dealt would be A, B, C, A, B, C, A, B, C.
+ of cards dealt would be A1, B1, C1, A2, B2, C2, A3, B3, C3.
 
  The output is organized by player:
 
