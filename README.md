@@ -9,10 +9,9 @@ It is a work in progress and may change significantly before it reaches version
 ## Quick Start
 
 To get started using Card Sharp, you can use the default ESM export to 
-instantiate a new deck.  (Sorry, CommonJS is not supported at this time.  Let 
-me know if that's a feature you want.)
+instantiate a new deck.
 
-Initialize deck:
+### Initialize deck (ESM):
 ```Javascript
 import sharp from "card-sharp";
 
@@ -21,9 +20,22 @@ let deck = sharp();
 console.log(deck.cards.length); // the default deck starts with 52 cards
 ```
 
-This will give you a simulated deck of 52 French-style playing cards, including 
-ace through king in four suits: clubs, diamonds, hearts, and spades.  Jokers 
-are not included in the default deck.
+CommonJS users can `require` the module, but should be advised that the module 
+export is a promise which will resolve into an object containing the ESM 
+module's named exports.
+
+### Initialize deck (CJS):
+```Javascript
+require("card-sharp").then((sharp) => {
+    let deck = sharp.init();
+
+    console.log(deck.cards.length); // the default deck starts with 52 cards
+});
+```
+
+Either method will give you a simulated deck of 52 French-style playing cards, 
+including ace through king in four suits: clubs, diamonds, hearts, and spades.  
+Jokers are not included in the default deck.
 
 From there, you can `draw` cards from this deck, return them to a `discard` 
 pile, `shuffle` the deck (optionally returning the discard pile to the deck), 
@@ -31,7 +43,7 @@ or `deal` cards to multiple players in turn.
 
 Note that the deck is not initially shuffled.
 
-Shuffle, draw, and discard:
+### Shuffle, draw, and discard:
 ```Javascript
 deck.shuffle(); // initial shuffle
 
@@ -51,7 +63,7 @@ deck.shuffle(true); // shuffle again, including discards
 console.log(deck.cards.length); // there are 52 cards in the deck again
 ```
 
-Deal to multiple players:
+### Deal to multiple players:
 ```Javascript
 let players = deck.deal(2, 5); // deal two cards each to 5 separate players
 

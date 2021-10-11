@@ -13,13 +13,16 @@
     "url": "https://github.com/adamlacoste/card-sharp/issues"
   },
   "main": "./main.mjs",
-  "exports": "./main.mjs",
+  "exports": {
+    "import": "./main.mjs",
+    "require": "./main.cjs"
+  },
   "type": "module",
   "scripts": {
     "doc": "./scripts/generate_docs.sh main.mjs lib/*",
     "lint": "./node_modules/.bin/eslint -c config/eslint.json",
     "postversion": "git push --tags origin main",
-    "preversion": "npm run lint && npm test && npm run doc",
+    "preversion": "npm run lint -- lib/* && npm test && npm run doc",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config config/jest.json",
     "version": "git add doc/ test/coverage"
   },

@@ -1,9 +1,9 @@
 /**
- *  Main entrypoint module
+ *  Main entrypoint (ESM) module
  *
  *  @author Adam Lacoste <adam.lacoste@hotmail.com>
  *
- *  @module card-sharp
+ *  @module card-sharp/mjs
  *
  *  @requires deep-extend
  *  @requires card-sharp/lib/card
