@@ -82,8 +82,8 @@ without any params, it will return a standard 52-card deck.
 ```Javascript
 import { config, init } from "card-sharp";
 
-let std_deck = init(config.decks.standard),        // same as default
-    jok_deck = init(config.decks.standard_jokers); // adds 2 jokers
+let std_deck = init({ "cards": config.decks.standard }),        // same as default
+    jok_deck = init({ "cards": config.decks.standard_jokers }); // adds 2 jokers
 ```
 
 Instead of using a prefab deck, you can build your own by providing an array of 
