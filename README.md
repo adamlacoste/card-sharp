@@ -8,7 +8,7 @@ It is a work in progress and may change significantly before it reaches version
 
 ## Quick Start
 
-To get started using **Card Sharp**, you can use the default ESM export to 
+To get started using Card Sharp, you can use the default ESM export to 
 instantiate a new deck.  (Sorry, CommonJS is not supported at this time.  Let 
 me know if that's a feature you want.)
 
