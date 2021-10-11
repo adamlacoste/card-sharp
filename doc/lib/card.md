@@ -2,40 +2,30 @@
 
 ## card-sharp/lib/card
 **Author**: Adam Lacoste <adam.lacoste@hotmail.com>  
+
 Card module
 
 
-* [card-sharp/lib/card](#module_card-sharp/lib/card)
-
-    * [~Card](#module_card-sharp/lib/card..Card)
-
-        * [new Card(user_opts)](#new_module_card-sharp/lib/card..Card_new)
-
-        * _instance_
-            * [.toString()](#module_card-sharp/lib/card..Card+toString)
-
-        * _static_
-            * [.fromArray(cards)](#module_card-sharp/lib/card..Card.fromArray)
-
+* [card-sharp/lib/card](#user-content-module_card-sharp/lib/card)
+  * _Other_
+    * [Card](#user-content-module_card-sharp/lib/card..Card)
+      * _Methods_
+        * [fromArray(cards)](#user-content-module_card-sharp/lib/card..Card.fromArray)
+        * [toString()](#user-content-module_card-sharp/lib/card..Card+toString)
 
 <a name="module_card-sharp/lib/card..Card"></a>
 
-### *card-sharp/lib/card*~Card
+### card-sharp/lib/card~Card
+
 Card class
 
  A single French-style playing card.
 
 
-* [~Card](#module_card-sharp/lib/card..Card)
-
-    * [new Card(user_opts)](#new_module_card-sharp/lib/card..Card_new)
-
-    * _instance_
-        * [.toString()](#module_card-sharp/lib/card..Card+toString)
-
-    * _static_
-        * [.fromArray(cards)](#module_card-sharp/lib/card..Card.fromArray)
-
+* [Card](#user-content-module_card-sharp/lib/card..Card)
+  * _Methods_
+    * [fromArray(cards)](#user-content-module_card-sharp/lib/card..Card.fromArray)
+    * [toString()](#user-content-module_card-sharp/lib/card..Card+toString)
 
 <a name="new_module_card-sharp/lib/card..Card_new"></a>
 
@@ -45,22 +35,25 @@ Card class
 | --- | --- | --- |
 | user_opts | <code>object</code> | User options for this card |
 
+
 Card constructor
 
-<a name="module_card-sharp/lib/card..Card+toString"></a>
-
-#### *card*.toString()
-String conversion method
-
-**Returns**: <code>string</code> - The card ID  
 <a name="module_card-sharp/lib/card..Card.fromArray"></a>
 
-#### *Card*.fromArray(cards)
+#### Card.fromArray(cards)
 
 | Param | Type | Description |
 | --- | --- | --- |
 | cards | <code>array</code> | The list of card options |
 
+**Returns**: <code>array.&lt;Card&gt;</code> - The generated cards  
+
 Generate cards from an array of objects
 
-**Returns**: <code>array.&lt;Card&gt;</code> - The generated cards  
+<a name="module_card-sharp/lib/card..Card+toString"></a>
+
+#### card.toString()
+**Returns**: <code>string</code> - The card ID  
+
+String conversion method
+

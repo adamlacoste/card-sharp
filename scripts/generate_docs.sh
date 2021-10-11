@@ -2,5 +2,5 @@ for path in $@; do
     doc_path="doc/${path%.mjs}.md"
     doc_dir_path="$(dirname $doc_path)"
     [ -d $doc_dir_path ] || mkdir -p $doc_dir_path
-    ./node_modules/.bin/jsdoc2md -c config/jsdoc.json --plugin dmd-clear -f $path > $doc_path
+    ./node_modules/.bin/jsdoc2md -c config/jsdoc.json --plugin dmd-clean -f $path > $doc_path
 done
