@@ -1,7 +1,8 @@
 /**
  *  Main entrypoint (ESM) module
  *
- *  @author Adam Lacoste <adam.lacoste@hotmail.com>
+ *  @author    Adam Lacoste <adam.lacoste@hotmail.com>
+ *  @copyright 2021 Adam Lacoste
  *
  *  @module card-sharp/mjs
  *
